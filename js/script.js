@@ -1,8 +1,3 @@
-// **Mail**
-// Chiedi all’utente la sua email,
-// controlla che sia nella lista di chi può accedere,
-// stampa un messaggio appropriato sull’esito del controllo.
-
 
 // const lista mail autorizzate
 
@@ -29,7 +24,8 @@ const output = document.getElementById("output");
 submitButton.addEventListener("click", function(){
 
   for(let i = 0; i < mailList.lenght; i++){
-  
+
+  // controllo condizione
     if (userMail === mailList[i]){
       present = true;
       break; 
@@ -39,6 +35,7 @@ submitButton.addEventListener("click", function(){
     }
   }
 
+  // stampa in pagina
   if(present){
     output.innerHTML = 'Buona fortuna!';
 }
