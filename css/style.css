@@ -1,13 +1,18 @@
 body{
-  background-color: cornflowerblue ;
+  background-color: #ECEBE4 ;
 }
 
   /*Mail control*/
   
-.jt-container{
-  max-width: 500px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.jt-container-1{
+  background-color: #429EA6;
+  margin: 50px auto;
+}
+
+.jt-container-2{
+  background-color: #153B50;
+}
+
+.outputResult{
+  margin-top: 10px;
 }
