@@ -1,13 +1,17 @@
+/* GENERAL */
+
 body{
   background-color: #ECEBE4 ;
 }
 
-  /*Mail control*/
+/*MAIL CHECK*/
   
 .jt-container-1{
   background-color: #429EA6;
   margin: 50px auto;
 }
+
+/* GAME */
 
 .jt-container-2{
   background-color: #153B50;
@@ -15,4 +19,5 @@ body{
 
 .outputResult{
   margin-top: 10px;
+  color: #153B50;
 }

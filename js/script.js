@@ -1,6 +1,7 @@
 
-// const lista mail autorizzate
+//VARIABLES DECLARATION AND INITIALIZATION
 
+//Authorized mail addresses
 const mailList = [
   "jessica.tartaglia@gmail.com",
   "laura.bolle@gmail.com",
@@ -14,32 +15,48 @@ const mailList = [
   "emma.pace@gmail.com"
 ];
 
-// le const di cui ho bisogno
-let present = true;
-const submitButton = document.getElementById("btn-input");
-const userMail = document.getElementById("userMail");
-const output = document.getElementById("output");
+// if mail is not present on authorized list
 
-// input mail utente con click
+let present = true;
+
+// button submit check mail
+const submitButton = document.getElementById("btn-input");
+
+// usermail
+const userMail = document.getElementById("userMail");
+
+// output for usermail
+const output = document.getElementById("output-mail");
+
+//FUNCTION CLICK TO CHECK MAIL AUTHORIZATION
 submitButton.addEventListener("click", function(){
 
-  for(let i = 0; i < mailList.lenght; i++){
+  // Condition for mail present
+  if (userMail !== ""){
+    for(let i = 0; i < mailList.lenght; i++){
 
-  // controllo condizione
-    if (userMail === mailList[i]){
-      present = true;
-      break; 
+      //Conditional statement for authorization
+      if (userMail === mailList[i]){
+        present = true;
+        break; 
+      }
+      else{
+        present = false;
+      }
+    }
+    
+    // Output print on page
+    if(present){
+      output.innerHTML = 'Buona fortuna!';
     }
     else{
-      present = false;
+      output.innerHTML = 'Ci dispiace, non sei autorizzatə a giocare! Inserire una mail valida.';
     }
   }
 
-  // stampa in pagina
-  if(present){
-    output.innerHTML = 'Buona fortuna!';
-}
+  // If no mail present ---- da verificare perché non funziona
   else{
-    output.innerHTML = 'Ci dispiace, non sei autorizzatə a giocare! Inrerire una mail valida.';
-}
-})
+    output.innerHTML = 'Nessuna mail inserita! Inserire una mail valida.';
+  }
+    
+});
