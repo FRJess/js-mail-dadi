@@ -48,7 +48,6 @@ playButton.addEventListener("click", function(){
   }else{
     outputResult = 'Pareggio!';
   }
-
   
   numbers.append(outputResult);
 

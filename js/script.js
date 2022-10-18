@@ -16,13 +16,13 @@ const mailList = [
 ];
 
 // if mail is not present on authorized list
-let present = true;
+let present = false;
 
 // button submit check mail
 const submitButton = document.getElementById("btn-input");
 
 // usermail
-const userMail = document.getElementById("userMail").value;
+let userMail = document.getElementById("userMail").value;
 
 // output for usermail
 const outputMail = document.getElementById("output-mail");
@@ -31,20 +31,21 @@ const outputMail = document.getElementById("output-mail");
 submitButton.addEventListener("click", function(){
 
   //Conditional statement for authorization
-  for(let i = 0; i < mailList.lenght; i++){
+  for(let i = 0; i < mailList.length; i++){
     if (userMail === mailList[i]){
       present = true;
-      break; 
     }
   }
   
   // Output print on page
-  if(present){
+  if(present === true){
     outputMail.innerHTML = 'Buona fortuna!';
   }
   else{
     outputMail.innerHTML = 'Ci dispiace, non sei autorizzatə a giocare! Inserire una mail valida.';
-  } 
+  }
+  present=false;
+  userMail.value=" ";
 });
 
 
